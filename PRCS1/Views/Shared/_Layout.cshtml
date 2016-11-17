@@ -3,25 +3,32 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - PRCS Blood Donor Center</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
+    
     <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+       
+        <div class="container" >
+            <h3 style="color:red; text-align:center">P.R.C.S Blood Donor Center</h3>
+            <h5 style="color:white; text-align:center">Blood Donor Record</h5>
+
             <div class="navbar-header">
+               
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Blood Donors", "Index", "BloodDonorInfoes", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "BloodDonorInfoes")</li>
+                <ul class="nav navbar-nav">   
+                    <li>@Html.ActionLink("Blood Donors", "Index", "BloodDonorInfoes")</li>
+                    <li>@Html.ActionLink("Create New", "Create", "BloodDonorInfoes")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
@@ -30,10 +37,11 @@
         </div>
     </div>
     <div class="container body-content">
+        <br/><br /><br /><br />
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year -P.R.C.S Blood Donor Center</p>
         </footer>
     </div>
 
