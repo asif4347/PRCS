@@ -1,0 +1,164 @@
+﻿@model PRCS.Models.BloodDonorInfo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BloodDonorInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SerialNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RegNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DonorNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonorNo)
+        </dd>
+
+        
+
+     
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SonOf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SonOf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BloodGroup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BloodGroup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastDonation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastDonation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoOfDonation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoOfDonation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Institute)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Institute)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Class)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Class)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelResidance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelResidance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelOffice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelOffice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FAX)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FAX)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mobile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
