@@ -15,7 +15,7 @@ namespace PRCS1.Controllers
         private BloodDbContext db = new BloodDbContext();
 
         // GET: BloodDonorInfoes
-        public ActionResult Index(string sName,string bloodGroup,string regNo)
+        public ActionResult Index(string sName,string bloodGroup,string donorNo)
         {
 
             var bloodLst = new List<string>();
@@ -39,9 +39,9 @@ namespace PRCS1.Controllers
             {
                 blood = blood.Where(x => x.BloodGroup == bloodGroup);
             }
-            if (!String.IsNullOrEmpty(regNo))
+            if (!String.IsNullOrEmpty(donorNo))
             {
-                blood = blood.Where(r => r.RegNo == regNo);
+                blood = blood.Where(r => r.DonorNo == donorNo);
             }
 
 
@@ -78,7 +78,7 @@ namespace PRCS1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,RegNo,DonorNo,SerialNo,Name,SonOf,Gender,DOB,Weight,BloodGroup,LastDonation,NoOfDonation,Institute,Class,TelResidance,TelOffice,FAX,Mobile,Email")] BloodDonorInfo bloodDonorInfo)
+        public ActionResult Create([Bind(Include = "ID,DonorNo,SerialNo,Name,SonOf,Gender,DOB,Weight,BloodGroup,LastDonation,NoOfDonation,Adress,District,PermanentDonor,TTIScreening,Institute,Class,TelResidance,TelOffice,FAX,Mobile,Email")] BloodDonorInfo bloodDonorInfo)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace PRCS1.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+            
             return View(bloodDonorInfo);
         }
 
@@ -110,7 +110,7 @@ namespace PRCS1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,RegNo,DonorNo,SerialNo,Name,SonOf,Gender,DOB,Weight,BloodGroup,LastDonation,NoOfDonation,Institute,Class,TelResidance,TelOffice,FAX,Mobile,Email")] BloodDonorInfo bloodDonorInfo)
+        public ActionResult Edit([Bind(Include = "ID,DonorNo,SerialNo,Name,SonOf,Gender,DOB,Weight,BloodGroup,LastDonation,NoOfDonation,Adress,District,PermanentDonor,TTIScreening,Institute,Class,TelResidance,TelOffice,FAX,Mobile,Email")] BloodDonorInfo bloodDonorInfo)
         {
             if (ModelState.IsValid)
             {

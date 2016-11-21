@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PRCS1.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
@@ -11,31 +12,48 @@ namespace PRCS.Models
     {
 
         public int ID { get; set; }
-        public string RegNo { get; set; }
+        public int Sr { get; set; }
+        [Required]
+        [Display(Name = "Donor#")]
         public string DonorNo { get; set; }
-        public string SerialNo { get; set; }
-        
+        [Required]
         public string Name { get; set; }
-        [Display(Name ="S/o.D/o")]
+        [Required]
+        [Display(Name = "S/o.D/o")]
         public string SonOf { get; set; }
+        [Required]
         public string Gender { get; set; }
 
         [Display(Name = "Date of Birth")]
         [DataType(DataType.Date)]
-        
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+
         public DateTime DOB { get; set; }
         public float Weight { get; set; }
-
-        [Display(Name ="Blood Group")]
+        [Required]
+        [Display(Name = "Blood Group")]
         public string BloodGroup { get; set; }
 
         [Display(Name = "Last Donation")]
         [DataType(DataType.Date)]
-       
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+
+        [Required]
         public DateTime LastDonation { get; set; }
 
         [Display(Name = "No. of Donation")]
         public int NoOfDonation { get; set; }
+        
+        [Required]
+        public string Adress { get; set; }
+        [Required]
+        public string District { get; set; }
+        [Required]
+        [DisplayFormat( ApplyFormatInEditMode = true)]
+        public string PermanentDonor { get; set; }
+        [Required]
+        [DisplayFormat(ApplyFormatInEditMode = true)]
+        public string TTIScreening { get; set; }
         public string Institute { get; set; }
         public string Class { get; set; }
 
@@ -48,6 +66,8 @@ namespace PRCS.Models
         public string Mobile { get; set; }
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
+        
+
 
     }
 
@@ -55,6 +75,7 @@ namespace PRCS.Models
     {
 
         public DbSet<BloodDonorInfo> BloodInfo { get; set; }
+        public DbSet<BloodCampusInfo> CampusInfo { get; set; }
 
     }
 

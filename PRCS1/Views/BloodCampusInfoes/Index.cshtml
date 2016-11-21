@@ -1,0 +1,98 @@
+﻿@model IEnumerable<PRCS1.Models.BloodCampusInfo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Blood Campus Info</h2>
+
+
+  @Html.ActionLink("Add New Campus", "Create", "BloodCampusInfoes", null, new { @class = "btn btn-primary btn-large" })<br/><br/>
+   
+@using (Html.BeginForm())
+{
+    <p>
+        Title: @Html.TextBox("SearchString") <br />
+        <input type="submit" value="Filter" />
+    </p> 
+}
+
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BloodCampus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrganizedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InstituteName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InstituteAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InstituteDistrict)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeansContact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SocietyContact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoOfBags)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BloodCampus)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.StartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrganizedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstituteName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstituteAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstituteDistrict)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeansContact)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SocietyContact)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoOfBags)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>
+@if (Model.Count() == 0)
+{
+    <h3 style="color:red">No Result Found!</h3>
+}

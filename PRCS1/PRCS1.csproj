@@ -168,13 +168,80 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BloodCampusInfoesController.cs" />
     <Compile Include="Controllers\BloodDonorInfoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611171940248_InitialCreate.cs" />
+    <Compile Include="Migrations\201611171940248_InitialCreate.Designer.cs">
+      <DependentUpon>201611171940248_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611181025344_initial.cs" />
+    <Compile Include="Migrations\201611181025344_initial.Designer.cs">
+      <DependentUpon>201611181025344_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611181030253_initial1.cs" />
+    <Compile Include="Migrations\201611181030253_initial1.Designer.cs">
+      <DependentUpon>201611181030253_initial1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611191328553_initial2.cs" />
+    <Compile Include="Migrations\201611191328553_initial2.Designer.cs">
+      <DependentUpon>201611191328553_initial2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611191343182_initial3.cs" />
+    <Compile Include="Migrations\201611191343182_initial3.Designer.cs">
+      <DependentUpon>201611191343182_initial3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611191410582_initial4.cs" />
+    <Compile Include="Migrations\201611191410582_initial4.Designer.cs">
+      <DependentUpon>201611191410582_initial4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611191630228_initial5.cs" />
+    <Compile Include="Migrations\201611191630228_initial5.Designer.cs">
+      <DependentUpon>201611191630228_initial5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611191906056_initial6.cs" />
+    <Compile Include="Migrations\201611191906056_initial6.Designer.cs">
+      <DependentUpon>201611191906056_initial6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611191923393_initial7.cs" />
+    <Compile Include="Migrations\201611191923393_initial7.Designer.cs">
+      <DependentUpon>201611191923393_initial7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611201615405_initial8.cs" />
+    <Compile Include="Migrations\201611201615405_initial8.Designer.cs">
+      <DependentUpon>201611201615405_initial8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611201647196_initial9.cs" />
+    <Compile Include="Migrations\201611201647196_initial9.Designer.cs">
+      <DependentUpon>201611201647196_initial9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611211355381_initial10.cs" />
+    <Compile Include="Migrations\201611211355381_initial10.Designer.cs">
+      <DependentUpon>201611211355381_initial10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611211444416_initial11.cs" />
+    <Compile Include="Migrations\201611211444416_initial11.Designer.cs">
+      <DependentUpon>201611211444416_initial11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611211451172_initial12.cs" />
+    <Compile Include="Migrations\201611211451172_initial12.Designer.cs">
+      <DependentUpon>201611211451172_initial12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611211531247_initial13.cs" />
+    <Compile Include="Migrations\201611211531247_initial13.Designer.cs">
+      <DependentUpon>201611211531247_initial13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611211549117_initial14.cs" />
+    <Compile Include="Migrations\201611211549117_initial14.Designer.cs">
+      <DependentUpon>201611211549117_initial14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\BloodCampusInfo.cs" />
     <Compile Include="Models\BloodDonorInfo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -202,7 +269,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -241,6 +310,11 @@
     <Content Include="Views\BloodDonorInfoes\Details.cshtml" />
     <Content Include="Views\BloodDonorInfoes\Edit.cshtml" />
     <Content Include="Views\BloodDonorInfoes\Index.cshtml" />
+    <Content Include="Views\BloodCampusInfoes\Create.cshtml" />
+    <Content Include="Views\BloodCampusInfoes\Delete.cshtml" />
+    <Content Include="Views\BloodCampusInfoes\Details.cshtml" />
+    <Content Include="Views\BloodCampusInfoes\Edit.cshtml" />
+    <Content Include="Views\BloodCampusInfoes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -252,6 +326,56 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201611171940248_InitialCreate.resx">
+      <DependentUpon>201611171940248_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611181025344_initial.resx">
+      <DependentUpon>201611181025344_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611181030253_initial1.resx">
+      <DependentUpon>201611181030253_initial1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611191328553_initial2.resx">
+      <DependentUpon>201611191328553_initial2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611191343182_initial3.resx">
+      <DependentUpon>201611191343182_initial3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611191410582_initial4.resx">
+      <DependentUpon>201611191410582_initial4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611191630228_initial5.resx">
+      <DependentUpon>201611191630228_initial5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611191906056_initial6.resx">
+      <DependentUpon>201611191906056_initial6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611191923393_initial7.resx">
+      <DependentUpon>201611191923393_initial7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611201615405_initial8.resx">
+      <DependentUpon>201611201615405_initial8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611201647196_initial9.resx">
+      <DependentUpon>201611201647196_initial9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611211355381_initial10.resx">
+      <DependentUpon>201611211355381_initial10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611211444416_initial11.resx">
+      <DependentUpon>201611211444416_initial11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611211451172_initial12.resx">
+      <DependentUpon>201611211451172_initial12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611211531247_initial13.resx">
+      <DependentUpon>201611211531247_initial13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611211549117_initial14.resx">
+      <DependentUpon>201611211549117_initial14.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

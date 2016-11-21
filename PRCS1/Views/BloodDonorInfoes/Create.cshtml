@@ -15,13 +15,7 @@
         <h4>Blood Donor Info</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.RegNo, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.RegNo, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.RegNo, "", new { @class = "text-danger" })
-            </div>
-        </div>
+       
 
         <div class="form-group">
             @Html.LabelFor(model => model.DonorNo, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -111,6 +105,47 @@
             </div>
         </div>
 
+
+
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.District, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.District, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.District, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Adress, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Adress, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Adress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PermanentDonor, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select class="list-group-item-text" name="PermanentDonor" style="height:30px" required>
+                    <option value="">-- select --</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                   
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.TTIScreening, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select class="list-group-item-text" name="TTIScreening" style="height:30px" required>
+                    <option value="">-- select --</option>
+                    <option value="Reactive">Reactive</option>
+                    <option value="NonReactive">NonReactive</option>
+
+                </select>
+            </div>
+        </div>
         <div class="form-group">
             @Html.LabelFor(model => model.Institute, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -170,6 +205,7 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
+                
             </div>
         </div>
     </div>

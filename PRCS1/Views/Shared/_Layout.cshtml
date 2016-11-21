@@ -10,7 +10,7 @@
 </head>
 <body>
     
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top" >
        
         <div class="container" >
             <h3 style="color:red; text-align:center">P.R.C.S Blood Donor Center</h3>
@@ -29,6 +29,8 @@
                 <ul class="nav navbar-nav">   
                     <li>@Html.ActionLink("Blood Donors", "Index", "BloodDonorInfoes")</li>
                     <li>@Html.ActionLink("Create New", "Create", "BloodDonorInfoes")</li>
+                    
+                    <li>@Html.ActionLink("Blood Campus", "Index", "BloodCampusInfoes")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
@@ -41,7 +43,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year -P.R.C.S Blood Donor Center</p>
+            <p>&copy; @DateTime.Now.Year -P.R.C.S Blood Donor Center.    All Rights Reserved</p>
         </footer>
     </div>
 
