@@ -16,7 +16,7 @@ namespace PRCS1.Controllers
         private BloodDbContext db = new BloodDbContext();
 
         // GET: BloodCampusInfoes
-        public ActionResult Index(string searchString)
+        public ActionResult Index(string searchString,string institute)
         {
             var movies = from m in db.CampusInfo
                          select m;
@@ -24,6 +24,10 @@ namespace PRCS1.Controllers
             if (!String.IsNullOrEmpty(searchString))
             {
                 movies = movies.Where(s => s.BloodCampus.Contains(searchString));
+            }
+            if (!String.IsNullOrEmpty(institute))
+            {
+                movies = movies.Where(s => s.InstituteName.Contains(institute));
             }
 
             return View(movies);

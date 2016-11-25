@@ -82,6 +82,7 @@ namespace PRCS1.Controllers
         {
             if (ModelState.IsValid)
             {
+                bloodDonorInfo.Sr += 1;
                 db.BloodInfo.Add(bloodDonorInfo);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -144,6 +145,7 @@ namespace PRCS1.Controllers
             BloodDonorInfo bloodDonorInfo = db.BloodInfo.Find(id);
             db.BloodInfo.Remove(bloodDonorInfo);
             db.SaveChanges();
+            
             return RedirectToAction("Index");
         }
 

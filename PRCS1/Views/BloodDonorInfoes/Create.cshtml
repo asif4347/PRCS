@@ -19,7 +19,9 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.DonorNo, htmlAttributes: new { @class = "control-label col-md-2" })
+            
             <div class="col-md-10">
+                
                 @Html.EditorFor(model => model.DonorNo, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.DonorNo, "", new { @class = "text-danger" })
             </div>
@@ -50,7 +52,7 @@
                     <option value="">-- select --</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
-                    <option value="Other">Other</option>
+                    
                 </select>
                     
             </div>
@@ -205,6 +207,7 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
+              
                 
             </div>
         </div>

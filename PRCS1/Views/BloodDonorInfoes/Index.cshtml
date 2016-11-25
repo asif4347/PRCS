@@ -55,18 +55,8 @@
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SonOf)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Gender)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DOB)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Weight)
-        </th>
+        
+       
         <th>
             @Html.DisplayNameFor(model => model.BloodGroup)
         </th>
@@ -80,37 +70,11 @@
         <th>
             @Html.DisplayNameFor(model => model.District)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Adress)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PermanentDonor)
-        </th>
+        
         <th>
             @Html.DisplayNameFor(model => model.TTIScreening)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Institute)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Class)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TelResidance)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TelOffice)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FAX)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Mobile)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th></th>
+        
     </tr>
 
 @foreach (var item in Model) {
@@ -118,6 +82,7 @@
 
       
         <tr>
+           
 
             <td>
                 @Html.DisplayFor(modelItem => item.DonorNo)
@@ -126,18 +91,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SonOf)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Gender)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DOB)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Weight)
-            </td>
+            
             <td>
                 @Html.DisplayFor(modelItem => item.BloodGroup)
             </td>
@@ -149,44 +103,18 @@
             </td>
 
 
-            <th>
+            <td>
                 @Html.DisplayFor(modelItem => item.District)
-            </th>
-            <th>
-                @Html.DisplayFor(modelItem => item.Adress)
-            </th>
-            <th>
-                @Html.DisplayFor(modelItem => item.PermanentDonor)
-            </th>
-            <th>
+            </td>
+           
+            <td>
                 @Html.DisplayFor(modelItem => item.TTIScreening)
-            </th>
-            <th>
-                @Html.DisplayFor(modelItem => item.Institute)
-            </th>
-            <td>
-                @Html.DisplayFor(modelItem => item.Class)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TelResidance)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TelOffice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FAX)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Mobile)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
+           
 
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                @Html.ActionLink("More Details", "Details", new { id = item.ID })
+               
             </td>
         </tr>
        
