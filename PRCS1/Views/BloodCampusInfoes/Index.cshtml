@@ -21,7 +21,7 @@
                 </div>
             <div class="col-md-6">
                 Institute: @Html.TextBox("Institute") <br /><br/>
-                </div>
+             </div>
             <div class="col-md-6">
                 <input type="submit" value="Filter" />
                 </div>
@@ -32,7 +32,7 @@
 
 
 
-<table class="table">
+<table class="table table-hover ;table-responsive table-bordered table-condensed">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.BloodCampus)
@@ -63,9 +63,10 @@
         </th>
         <th></th>
     </tr>
-
+    @{int tBags = 0; }
     @foreach (var item in Model)
     {
+
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.BloodCampus)
@@ -101,10 +102,22 @@
                 @Html.ActionLink("Delete", "Delete", new { id = item.ID })
             </td>
         </tr>
-    }
 
+
+        tBags = tBags + item.NoOfBags;
+
+    }
+   
 </table>
+
+
+
 @if (Model.Count() == 0)
 {
     <h3 style="color:red">No Result Found!</h3>
+}
+else
+{
+
+    <label>Total No. of Blood bags Collected : </label>@tBags
 }

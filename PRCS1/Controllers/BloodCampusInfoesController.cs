@@ -11,11 +11,13 @@ using PRCS1.Models;
 
 namespace PRCS1.Controllers
 {
+    [Authorize]
     public class BloodCampusInfoesController : Controller
     {
         private BloodDbContext db = new BloodDbContext();
 
         // GET: BloodCampusInfoes
+        [Authorize]
         public ActionResult Index(string searchString,string institute)
         {
             var movies = from m in db.CampusInfo
@@ -59,6 +61,7 @@ namespace PRCS1.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+       
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,StartTime,BloodCampus,OrganizedDate,InstituteName,InstituteAddress,InstituteDistrict,DeansContact,SocietyContact,NoOfBags")] BloodCampusInfo bloodCampusInfo)
         {

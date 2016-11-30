@@ -4,7 +4,7 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Blood Donor's Details</h2>
+<h2>@Model.Name's Details</h2>
 
 <div>
    
@@ -117,15 +117,41 @@
             @Html.DisplayFor(model => model.PermanentDonor)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.TTIScreening)
+            @Html.DisplayNameFor(model => model.HBsAg)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.TTIScreening)
+            @Html.DisplayFor(model => model.HBsAg)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.HCV)
+        </dt>
 
+        <dd>
+            @Html.DisplayFor(model => model.HCV)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HIV)
+        </dt>
 
+        <dd>
+            @Html.DisplayFor(model => model.HIV)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Syphilis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Syphilis)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Malaria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Malaria)
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Institute)
         </dt>

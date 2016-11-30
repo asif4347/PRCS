@@ -53,7 +53,19 @@ namespace PRCS.Models
         public string PermanentDonor { get; set; }
         [Required]
         [DisplayFormat(ApplyFormatInEditMode = true)]
-        public string TTIScreening { get; set; }
+        public string HBsAg { get; set; }
+        [Required]
+        [DisplayFormat(ApplyFormatInEditMode = true)]
+        public string HCV { get; set; }
+        [Required]
+        [DisplayFormat(ApplyFormatInEditMode = true)]
+        public string HIV { get; set; }
+        [Required]
+        [DisplayFormat(ApplyFormatInEditMode = true)]
+        public string Syphilis { get; set; }
+        [Required]
+        [DisplayFormat(ApplyFormatInEditMode = true)]
+        public string Malaria { get; set; }
         public string Institute { get; set; }
         public string Class { get; set; }
 

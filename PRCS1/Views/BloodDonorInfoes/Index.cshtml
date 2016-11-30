@@ -44,7 +44,7 @@
 </p> 
     }
 </p>
-<table class="table">
+<table class="table table-hover ;table-responsive table-bordered table-condensed">
     <tr>
         
         
@@ -72,9 +72,21 @@
         </th>
         
         <th>
-            @Html.DisplayNameFor(model => model.TTIScreening)
+            @Html.DisplayNameFor(model => model.HBsAg)
         </th>
-        
+        <th>
+            @Html.DisplayNameFor(model => model.HCV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HIV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Syphilis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Malaria)
+        </th>
+        <th>Details</th>
     </tr>
 
 @foreach (var item in Model) {
@@ -108,9 +120,20 @@
             </td>
            
             <td>
-                @Html.DisplayFor(modelItem => item.TTIScreening)
+                @Html.DisplayFor(modelItem => item.HBsAg)
             </td>
-           
+            <td>
+                @Html.DisplayFor(modelItem => item.HCV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HIV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Syphilis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Malaria)
+            </td>
 
             <td>
                 @Html.ActionLink("More Details", "Details", new { id = item.ID })

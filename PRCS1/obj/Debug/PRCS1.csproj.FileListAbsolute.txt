@@ -153,3 +153,6 @@ C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.initial11.
 C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.initial12.resources
 C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.initial13.resources
 C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.initial14.resources
+C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.initial15.resources
+C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.RolesAdded.resources
+C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.kkkk.resources

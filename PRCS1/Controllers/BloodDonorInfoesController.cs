@@ -10,6 +10,7 @@ using PRCS.Models;
 
 namespace PRCS1.Controllers
 {
+    [Authorize]
     public class BloodDonorInfoesController : Controller
     {
         private BloodDbContext db = new BloodDbContext();
@@ -78,7 +79,7 @@ namespace PRCS1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,DonorNo,SerialNo,Name,SonOf,Gender,DOB,Weight,BloodGroup,LastDonation,NoOfDonation,Adress,District,PermanentDonor,TTIScreening,Institute,Class,TelResidance,TelOffice,FAX,Mobile,Email")] BloodDonorInfo bloodDonorInfo)
+        public ActionResult Create([Bind(Include = "ID,DonorNo,SerialNo,Name,SonOf,Gender,DOB,Weight,BloodGroup,LastDonation,NoOfDonation,Adress,District,PermanentDonor,HBsAg,HCV,HIV,Syphilis,Malaria,Institute,Class,TelResidance,TelOffice,FAX,Mobile,Email")] BloodDonorInfo bloodDonorInfo)
         {
             if (ModelState.IsValid)
             {
@@ -111,7 +112,7 @@ namespace PRCS1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,DonorNo,SerialNo,Name,SonOf,Gender,DOB,Weight,BloodGroup,LastDonation,NoOfDonation,Adress,District,PermanentDonor,TTIScreening,Institute,Class,TelResidance,TelOffice,FAX,Mobile,Email")] BloodDonorInfo bloodDonorInfo)
+        public ActionResult Edit([Bind(Include = "ID,DonorNo,SerialNo,Name,SonOf,Gender,DOB,Weight,BloodGroup,LastDonation,NoOfDonation,Adress,District,PermanentDonor,HBsAg,HCV,HIV,Syphilis,Malaria,,Institute,Class,TelResidance,TelOffice,FAX,Mobile,Email")] BloodDonorInfo bloodDonorInfo)
         {
             if (ModelState.IsValid)
             {

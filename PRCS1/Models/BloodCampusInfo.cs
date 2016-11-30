@@ -6,6 +6,7 @@ using System.Web;
 
 namespace PRCS1.Models
 {
+   
     public class BloodCampusInfo
     {
         public int ID { get; set; }
