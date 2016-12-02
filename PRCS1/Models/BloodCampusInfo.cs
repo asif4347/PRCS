@@ -39,8 +39,11 @@ namespace PRCS1.Models
         [Display(Name ="Society Number")]
         public string SocietyContact { get; set; }
         [Required]
-        [Display(Name ="No of Blood Bags Collected")]
-        public int NoOfBags { get; set; }
+        [Display(Name ="No of Blood Bags Collected(Day1)")]
+        public int NoOfBagsDay1 { get; set; }
+      
+        [Display(Name = "No of Blood Bags Collected(Day2)")]
+        public int NoOfBagsDay2 { get; set; }
 
     }
     

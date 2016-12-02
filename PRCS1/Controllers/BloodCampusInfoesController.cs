@@ -63,7 +63,7 @@ namespace PRCS1.Controllers
         [HttpPost]
        
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,StartTime,BloodCampus,OrganizedDate,InstituteName,InstituteAddress,InstituteDistrict,DeansContact,SocietyContact,NoOfBags")] BloodCampusInfo bloodCampusInfo)
+        public ActionResult Create([Bind(Include = "ID,StartTime,BloodCampus,OrganizedDate,InstituteName,InstituteAddress,InstituteDistrict,DeansContact,SocietyContact,NoOfBagsDay1,NoOfBagsDay2")] BloodCampusInfo bloodCampusInfo)
         {
             if (ModelState.IsValid)
             {
@@ -95,7 +95,7 @@ namespace PRCS1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,StartTime,BloodCampus,OrganizedDate,InstituteName,InstituteAddress,InstituteDistrict,DeansContact,SocietyContact,NoOfBags")] BloodCampusInfo bloodCampusInfo)
+        public ActionResult Edit([Bind(Include = "ID,StartTime,BloodCampus,OrganizedDate,InstituteName,InstituteAddress,InstituteDistrict,DeansContact,SocietyContact,NoOfBagsDay1,NoOfBagsDay2")] BloodCampusInfo bloodCampusInfo)
         {
             if (ModelState.IsValid)
             {

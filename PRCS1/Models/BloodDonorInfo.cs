@@ -69,18 +69,23 @@ namespace PRCS.Models
         public string Institute { get; set; }
         public string Class { get; set; }
 
-        [Display(Name = "Residance Telephone")]
-        public string TelResidance { get; set; }
+       
         [Display(Name = "Office Telephone")]
         public string TelOffice { get; set; }
-        public string FAX { get; set; }
+       
         [DataType(DataType.PhoneNumber)]
         public string Mobile { get; set; }
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
-        
-
-
+       
+        [Display(Name ="Donor's Reaction")]
+        public string DonorReaction { get; set; }
+        public string Haematioma { get; set; }
+        public string Nausia { get; set; }
+        public string Vom { get; set; }
+        public string  Dizziness { get; set; }
+        public string Fainting { get; set; }
+        public string Convulsions { get; set; }
     }
 
     public class BloodDbContext : DbContext

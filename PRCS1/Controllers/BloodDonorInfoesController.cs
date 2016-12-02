@@ -16,7 +16,7 @@ namespace PRCS1.Controllers
         private BloodDbContext db = new BloodDbContext();
 
         // GET: BloodDonorInfoes
-        public ActionResult Index(string sName,string bloodGroup,string donorNo)
+        public ActionResult Index(string sName,string bloodGroup,string dist,string gender)
         {
 
             var bloodLst = new List<string>();
@@ -31,20 +31,23 @@ namespace PRCS1.Controllers
 
             var blood = from m in db.BloodInfo
                         select m;
-
+           
             if (!String.IsNullOrEmpty(sName))
             {
-                blood = blood.Where(s => s.Name.Contains(sName));
+                blood = blood.Where(s => s.Adress.Contains(sName));
             }
             if (!string.IsNullOrEmpty(bloodGroup))
             {
                 blood = blood.Where(x => x.BloodGroup == bloodGroup);
             }
-            if (!String.IsNullOrEmpty(donorNo))
+            if (!String.IsNullOrEmpty(dist))
             {
-                blood = blood.Where(r => r.DonorNo == donorNo);
+                blood = blood.Where(r => r.District == dist);
             }
-
+            if (!String.IsNullOrEmpty(gender))
+            {
+                blood = blood.Where(s => s.Gender.Contains(gender));
+            }
 
 
             return View(blood);
@@ -79,7 +82,7 @@ namespace PRCS1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,DonorNo,SerialNo,Name,SonOf,Gender,DOB,Weight,BloodGroup,LastDonation,NoOfDonation,Adress,District,PermanentDonor,HBsAg,HCV,HIV,Syphilis,Malaria,Institute,Class,TelResidance,TelOffice,FAX,Mobile,Email")] BloodDonorInfo bloodDonorInfo)
+        public ActionResult Create([Bind(Include = "ID,DonorNo,SerialNo,Name,SonOf,Gender,DOB,Weight,BloodGroup,LastDonation,NoOfDonation,Adress,District,PermanentDonor,HBsAg,HCV,HIV,Syphilis,Malaria,Institute,Class,TelResidance,TelOffice,FAX,Mobile,Email,Haematioma,Nausia,Vom,Dizziness,Fainting,Convulsions")] BloodDonorInfo bloodDonorInfo)
         {
             if (ModelState.IsValid)
             {
@@ -112,7 +115,7 @@ namespace PRCS1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,DonorNo,SerialNo,Name,SonOf,Gender,DOB,Weight,BloodGroup,LastDonation,NoOfDonation,Adress,District,PermanentDonor,HBsAg,HCV,HIV,Syphilis,Malaria,,Institute,Class,TelResidance,TelOffice,FAX,Mobile,Email")] BloodDonorInfo bloodDonorInfo)
+        public ActionResult Edit([Bind(Include = "ID,DonorNo,SerialNo,Name,SonOf,Gender,DOB,Weight,BloodGroup,LastDonation,NoOfDonation,Adress,District,PermanentDonor,HBsAg,HCV,HIV,Syphilis,Malaria,,Institute,Class,TelResidance,TelOffice,FAX,Mobile,Email,Haematioma,Nausia,Vom,Dizziness,Fainting,Convulsions")] BloodDonorInfo bloodDonorInfo)
         {
             if (ModelState.IsValid)
             {

@@ -251,6 +251,22 @@
     <Compile Include="Migrations\201611261125592_kkkk.Designer.cs">
       <DependentUpon>201611261125592_kkkk.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611302137433_initial16.cs" />
+    <Compile Include="Migrations\201611302137433_initial16.Designer.cs">
+      <DependentUpon>201611302137433_initial16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612011120053_initial17.cs" />
+    <Compile Include="Migrations\201612011120053_initial17.Designer.cs">
+      <DependentUpon>201612011120053_initial17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612011135479_initial18.cs" />
+    <Compile Include="Migrations\201612011135479_initial18.Designer.cs">
+      <DependentUpon>201612011135479_initial18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612020628306_initail.cs" />
+    <Compile Include="Migrations\201612020628306_initail.Designer.cs">
+      <DependentUpon>201612020628306_initail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BloodCampusInfo.cs" />
@@ -398,6 +414,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611261125592_kkkk.resx">
       <DependentUpon>201611261125592_kkkk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611302137433_initial16.resx">
+      <DependentUpon>201611302137433_initial16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612011120053_initial17.resx">
+      <DependentUpon>201612011120053_initial17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612011135479_initial18.resx">
+      <DependentUpon>201612011135479_initial18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612020628306_initail.resx">
+      <DependentUpon>201612020628306_initail.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

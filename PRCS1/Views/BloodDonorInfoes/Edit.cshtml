@@ -64,8 +64,8 @@
 
                 <select class="list-group-item-text" required name="Gender" style="height:30px">
                     <option value=@Html.DisplayFor(model=>model.Gender)>@Html.DisplayFor(model => model.Gender)</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
 
                 </select>
 
@@ -202,34 +202,19 @@
 
 
 
+
         <div class="row">
             @Html.LabelFor(model => model.Class, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-xs-3">
                 @Html.EditorFor(model => model.Class, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Class, "", new { @class = "text-danger" })
             </div>
-            @Html.LabelFor(model => model.TelResidance, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-xs-3">
-                @Html.EditorFor(model => model.TelResidance, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.TelResidance, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-
-        <br />
-        <div class="row">
             @Html.LabelFor(model => model.TelOffice, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-xs-3">
                 @Html.EditorFor(model => model.TelOffice, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.TelOffice, "", new { @class = "text-danger" })
             </div>
-            @Html.LabelFor(model => model.FAX, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-xs-3">
-                @Html.EditorFor(model => model.FAX, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FAX, "", new { @class = "text-danger" })
-            </div>
         </div>
-
 
         <br />
         <div class="row">
@@ -244,7 +229,48 @@
                 @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
             </div>
         </div>
+        <div class="row">
+            @Html.LabelFor(model => model.DonorReaction, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-xs-3" >
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="Haematioma" value="Haematioma"  />
+                        Haematioma
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="Nausia" value="Nausia"  />
+                        Nausia
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="Vom" value="Vom" />
+                        Vom
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="Dizziness" value="Dizziness" />
+                        Dizziness
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="Fainting" value="Fainting" />
+                        Fainting
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="Convulsions" value="Convulsions" />
+                        Convulsions
+                    </label>
+                </div>
+            </div>
 
+        </div>
 
         <br />
         <div class="form-group">
