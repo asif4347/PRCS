@@ -345,6 +345,7 @@
     <Content Include="Views\BloodCampusInfoes\Details.cshtml" />
     <Content Include="Views\BloodCampusInfoes\Edit.cshtml" />
     <Content Include="Views\BloodCampusInfoes\Index.cshtml" />
+    <Content Include="Views\BloodDonorInfoes\showReacted.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -48,14 +48,46 @@ namespace PRCS1.Controllers
             {
                 blood = blood.Where(s => s.Gender.Contains(gender));
             }
-
-
+            string vom = null;
+            if (String.IsNullOrEmpty(vom))
+            {
+                blood = blood.Where(r => r.Vom.Contains(vom));
+            }
+            //blood = blood.Where(hiv => hiv.HIV.Contains("NonReactive"));
+            //blood = blood.Where(hcv => hcv.HCV.Contains("NonReactive"));
+            //blood = blood.Where(hbs => hbs.HBsAg.Contains("NonReactive"));
+            //blood = blood.Where(syp => syp.Syphilis.Contains("NonReactive"));
+            //blood = blood.Where(mal => mal.Malaria.Contains("NonReactive"));
+            //blood = blood.Where(r => r.Haematioma.Contains(""));
+            //blood = blood.Where(r => r.Nausia.Contains(""));
+            //blood = blood.Where(r => r.Vom.Contains(""));
+            //blood = blood.Where(r => r.Dizziness.Contains(""));
+            //blood = blood.Where(r => r.Fainting.Contains(""));
+            //blood = blood.Where(r => r.Convulsions.Contains(""));
             return View(blood);
 
 
 
         }
+        public ActionResult showReacted(string res)
+        {
+            var blood = from m in db.BloodInfo
+                        select m;
+            if(true)
+                blood = blood.Where(r => r.Haematioma.Contains("Haematioma"));
+            if (true)
+                blood = blood.Where(r => r.Nausia.Contains("Nausia"));
+            if (true)
+                blood = blood.Where(r => r.Vom.Contains("Vom"));
+            if (true)
+                blood = blood.Where(r => r.Dizziness.Contains("Dizziness"));
+            if (true)
+                blood = blood.Where(r => r.Fainting.Contains("Fainting"));
+            if (true)
+                blood = blood.Where(r => r.Convulsions.Contains("Convulsions"));
 
+            return View(blood);
+        }
         // GET: BloodDonorInfoes/Details/5
         public ActionResult Details(int? id)
         {

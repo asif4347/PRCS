@@ -56,6 +56,7 @@
 </p> 
     }
 </p>
+    <ol> 
 <table class="table table-hover ;table-responsive table-bordered table-condensed">
     <tr>
         
@@ -106,57 +107,57 @@
         {
            
 <tr>
-                
+               
+    
+        <li>
+            <td>
+                @Html.DisplayFor(modelItem => item.DonorNo)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.BloodGroup)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastDonation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoOfDonation)
+            </td>
 
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.DonorNo)
-                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.District)
+            </td>
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HBsAg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HCV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HIV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Syphilis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Malaria)
+            </td>
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.BloodGroup)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LastDonation)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NoOfDonation)
-                </td>
+            <td>
+                @Html.ActionLink("More Details", "Details", new { id = item.ID })
 
-
-                <td>
-                    @Html.DisplayFor(modelItem => item.District)
-                </td>
-
-                <td>
-                    @Html.DisplayFor(modelItem => item.HBsAg)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.HCV)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.HIV)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Syphilis)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Malaria)
-                </td>
-
-                <td>
-                    @Html.ActionLink("More Details", "Details", new { id = item.ID })
-
-                </td>
-                
+            </td>
+        </li>
             </tr>
 
    
-
+   
 
         }
     
@@ -164,7 +165,8 @@
 
     
 </table>
-
+        </ol> 
+    @Html.ActionLink("Show reactives","showReacted","BloodDonorInfoes")
     <script>
         var count = 0;
         function myFunction() {
@@ -174,14 +176,7 @@
         document.getElementById("demo").innerHTML = myFunction();
 
 
-        $(function () {
-            var i = 0;
-            $('table thead tr').prepend('<th>#</th>');
-            $('table tbody tr').each(function () {
-                i += 1;
-                $(this).prepend('<td>' + i + '</td>');
-            });
-        });​
+       
     </script>
 
 

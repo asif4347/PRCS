@@ -1,0 +1,79 @@
+﻿@model IEnumerable<PRCS.Models.BloodDonorInfo>
+@{
+    ViewBag.Title = "showReacted";
+}
+
+<h2>showReacted</h2>
+<table class="table table-hover ;table-responsive table-bordered table-condensed">
+    <tr>
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.DonorNo)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.BloodGroup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastDonation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoOfDonation)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.District)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.DonorReaction)
+        </th>
+        
+        <th>Details</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonorNo)
+        </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.BloodGroup)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastDonation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NoOfDonation)
+                </td>
+
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.District)
+                </td>
+            <td>
+        @Html.DisplayNameFor(model => model.Haematioma)
+                @Html.DisplayNameFor(model => model.Nausia)
+                @Html.DisplayNameFor(model => model.Vom)
+        @Html.DisplayNameFor(model => model.Dizziness)
+                @Html.DisplayNameFor(model => model.Fainting)
+                @Html.DisplayNameFor(model => model.Convulsions)
+</td>
+            <td>
+                @Html.ActionLink("More Details", "Details", new { id = item.ID })
+
+            </td>
+</tr>
+    }
+    </table>
