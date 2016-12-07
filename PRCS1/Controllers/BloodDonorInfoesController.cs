@@ -48,44 +48,23 @@ namespace PRCS1.Controllers
             {
                 blood = blood.Where(s => s.Gender.Contains(gender));
             }
-            string vom = null;
-            if (String.IsNullOrEmpty(vom))
-            {
-                blood = blood.Where(r => r.Vom.Contains(vom));
-            }
-            //blood = blood.Where(hiv => hiv.HIV.Contains("NonReactive"));
-            //blood = blood.Where(hcv => hcv.HCV.Contains("NonReactive"));
-            //blood = blood.Where(hbs => hbs.HBsAg.Contains("NonReactive"));
-            //blood = blood.Where(syp => syp.Syphilis.Contains("NonReactive"));
-            //blood = blood.Where(mal => mal.Malaria.Contains("NonReactive"));
-            //blood = blood.Where(r => r.Haematioma.Contains(""));
-            //blood = blood.Where(r => r.Nausia.Contains(""));
-            //blood = blood.Where(r => r.Vom.Contains(""));
-            //blood = blood.Where(r => r.Dizziness.Contains(""));
-            //blood = blood.Where(r => r.Fainting.Contains(""));
-            //blood = blood.Where(r => r.Convulsions.Contains(""));
+         //   blood=blood.Where(sl=>sl.isSelected.Contains("Not"))
+            blood = blood.Where(hiv => hiv.HIV.Contains("NonReactive"));
+            blood = blood.Where(hcv => hcv.HCV.Contains("NonReactive"));
+            blood = blood.Where(hbs => hbs.HBsAg.Contains("NonReactive"));
+            blood = blood.Where(syp => syp.Syphilis.Contains("NonReactive"));
+            blood = blood.Where(mal => mal.Malaria.Contains("NonReactive"));
+            
             return View(blood);
 
 
 
         }
-        public ActionResult showReacted(string res)
+        public ActionResult showReacted()
         {
             var blood = from m in db.BloodInfo
                         select m;
-            if(true)
-                blood = blood.Where(r => r.Haematioma.Contains("Haematioma"));
-            if (true)
-                blood = blood.Where(r => r.Nausia.Contains("Nausia"));
-            if (true)
-                blood = blood.Where(r => r.Vom.Contains("Vom"));
-            if (true)
-                blood = blood.Where(r => r.Dizziness.Contains("Dizziness"));
-            if (true)
-                blood = blood.Where(r => r.Fainting.Contains("Fainting"));
-            if (true)
-                blood = blood.Where(r => r.Convulsions.Contains("Convulsions"));
-
+            blood = blood.Where(l => l.isSelected.Contains("Selected"));
             return View(blood);
         }
         // GET: BloodDonorInfoes/Details/5
@@ -102,6 +81,7 @@ namespace PRCS1.Controllers
             }
             return View(bloodDonorInfo);
         }
+    
 
         // GET: BloodDonorInfoes/Create
         public ActionResult Create()
@@ -112,19 +92,14 @@ namespace PRCS1.Controllers
         // POST: BloodDonorInfoes/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,DonorNo,SerialNo,Name,SonOf,Gender,DOB,Weight,BloodGroup,LastDonation,NoOfDonation,Adress,District,PermanentDonor,HBsAg,HCV,HIV,Syphilis,Malaria,Institute,Class,TelResidance,TelOffice,FAX,Mobile,Email,Haematioma,Nausia,Vom,Dizziness,Fainting,Convulsions")] BloodDonorInfo bloodDonorInfo)
+       public ActionResult select(int ?id)
         {
-            if (ModelState.IsValid)
-            {
-                bloodDonorInfo.Sr += 1;
-                db.BloodInfo.Add(bloodDonorInfo);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+            db.BloodInfo.Find(id).isSelected = "Selected";
+            db.BloodInfo.Find(id).LastDonation = DateTime.Now;
+            //DateTime d1 = db.BloodInfo.Find(id).LastDonation;
             
-            return View(bloodDonorInfo);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
 
         // GET: BloodDonorInfoes/Edit/5

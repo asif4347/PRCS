@@ -153,6 +153,14 @@
                 @Html.ActionLink("More Details", "Details", new { id = item.ID })
 
             </td>
+            <td>
+                @{ 
+                    DateTime d1 = item.LastDonation;
+                    DateTime d2 = DateTime.Now;
+                    TimeSpan t = d2 - d1;
+                }
+                @t
+                </td>
         </li>
             </tr>
 
@@ -166,7 +174,7 @@
     
 </table>
         </ol> 
-    @Html.ActionLink("Show reactives","showReacted","BloodDonorInfoes")
+    @Html.ActionLink("Show Selected","showReacted","BloodDonorInfoes")
     <script>
         var count = 0;
         function myFunction() {

@@ -267,6 +267,10 @@
     <Compile Include="Migrations\201612020628306_initail.Designer.cs">
       <DependentUpon>201612020628306_initail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612070754486_initial19.cs" />
+    <Compile Include="Migrations\201612070754486_initial19.Designer.cs">
+      <DependentUpon>201612070754486_initial19.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BloodCampusInfo.cs" />
@@ -427,6 +431,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612020628306_initail.resx">
       <DependentUpon>201612020628306_initail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612070754486_initial19.resx">
+      <DependentUpon>201612070754486_initial19.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -86,6 +86,8 @@ namespace PRCS.Models
         public string  Dizziness { get; set; }
         public string Fainting { get; set; }
         public string Convulsions { get; set; }
+        [Display(Name = "Select Donor")]
+        public string isSelected { get; set; }
     }
 
     public class BloodDbContext : DbContext

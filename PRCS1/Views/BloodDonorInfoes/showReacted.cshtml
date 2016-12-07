@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<PRCS.Models.BloodDonorInfo>
 @{
-    ViewBag.Title = "showReacted";
+    ViewBag.Title = "Show Selected";
 }
 
-<h2>showReacted</h2>
-<table class="table table-hover ;table-responsive table-bordered table-condensed">
+<h2>Members who donated</h2>
+<table class="table table-hover table-responsive table-bordered table-condensed">
     <tr>
 
 
@@ -15,7 +15,6 @@
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
-
 
         <th>
             @Html.DisplayNameFor(model => model.BloodGroup)
@@ -32,7 +31,19 @@
         </th>
 
         <th>
-            @Html.DisplayNameFor(model => model.DonorReaction)
+            @Html.DisplayNameFor(model => model.HBsAg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HCV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HIV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Syphilis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Malaria)
         </th>
         
         <th>Details</th>
@@ -63,17 +74,26 @@
                     @Html.DisplayFor(modelItem => item.District)
                 </td>
             <td>
-        @Html.DisplayNameFor(model => model.Haematioma)
-                @Html.DisplayNameFor(model => model.Nausia)
-                @Html.DisplayNameFor(model => model.Vom)
-        @Html.DisplayNameFor(model => model.Dizziness)
-                @Html.DisplayNameFor(model => model.Fainting)
-                @Html.DisplayNameFor(model => model.Convulsions)
-</td>
+                @Html.DisplayFor(modelItem => item.HBsAg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HCV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HIV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Syphilis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Malaria)
+            </td>
+
             <td>
                 @Html.ActionLink("More Details", "Details", new { id = item.ID })
 
             </td>
+            
 </tr>
     }
     </table>
