@@ -56,7 +56,7 @@
 </p> 
     }
 </p>
-    <ol> 
+     
 <table class="table table-hover ;table-responsive table-bordered table-condensed">
     <tr>
         
@@ -99,6 +99,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Malaria)
         </th>
+        <th>Days till Dnonation</th>
         <th>Details</th>
     </tr>
   @* @{ int i = 0;}*@
@@ -109,7 +110,7 @@
 <tr>
                
     
-        <li>
+        
             <td>
                 @Html.DisplayFor(modelItem => item.DonorNo)
             </td>
@@ -148,20 +149,25 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Malaria)
             </td>
-
+            <td>
+                @{
+                    DateTime d1 = item.LastDonation;
+                    DateTime d2 = DateTime.Today;
+                    TimeSpan t = d2 - d1;
+                    Double NrOfDays = t.TotalDays;
+                    if (NrOfDays < 0)
+                    {
+                        NrOfDays = 0;
+                    }
+                }
+                @NrOfDays
+            </td>
             <td>
                 @Html.ActionLink("More Details", "Details", new { id = item.ID })
 
             </td>
-            <td>
-                @{ 
-                    DateTime d1 = item.LastDonation;
-                    DateTime d2 = DateTime.Now;
-                    TimeSpan t = d2 - d1;
-                }
-                @t
-                </td>
-        </li>
+            
+        
             </tr>
 
    
@@ -173,7 +179,7 @@
 
     
 </table>
-        </ol> 
+         
     @Html.ActionLink("Show Selected","showReacted","BloodDonorInfoes")
     <script>
         var count = 0;
