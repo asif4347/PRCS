@@ -42,7 +42,7 @@ namespace PRCS1.Models
         [Display(Name ="No of Blood Bags Collected(Day1)")]
         public int NoOfBagsDay1 { get; set; }
       
-        [Display(Name = "No of Blood Bags Collected(Day2)")]
+       // [Display(Name = "No of Blood Bags Collected(Day2)")]
         public int NoOfBagsDay2 { get; set; }
 
     }

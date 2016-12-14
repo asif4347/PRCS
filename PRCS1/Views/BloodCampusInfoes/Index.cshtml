@@ -64,6 +64,7 @@
         <th>
             @Html.DisplayNameFor(model => model.NoOfBagsDay2)
         </th>
+        <th>Total</th>
         <th></th>
     </tr>
     @{int tBags = 0; }
@@ -101,6 +102,10 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.NoOfBagsDay2)
+            </td>
+            <td>
+                @{int tDays = item.NoOfBagsDay1 + item.NoOfBagsDay2; }
+                @tDays
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |

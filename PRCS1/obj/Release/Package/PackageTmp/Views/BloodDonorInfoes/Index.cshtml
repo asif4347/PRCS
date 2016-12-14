@@ -1,0 +1,200 @@
+﻿@model IEnumerable<PRCS.Models.BloodDonorInfo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+ 
+<body>
+<h2>Index</h2>
+
+   
+    
+
+
+
+<p>
+    
+
+    @using (Html.BeginForm())
+    {
+
+    <p>
+        <div class="form-horizontal">
+          
+                
+                <div class="col-md-3">
+
+                    District: @Html.TextBox("Dist") <br /><br />
+
+                
+                </div>
+
+                
+                    <div class="col-md-3">
+                        Blood Group: @Html.DropDownList("bloodGroup", "All")<br /><br />
+                    </div>
+               
+                    <div class="col-md-3">
+                        Area: @Html.TextBox("sName") <br /><br />
+                    </div>
+            <div class="col-md-3">
+                Gender:
+                <select class="list-group-item-text" name="gender" style="height:30px">
+                    <option value="">-- select --</option>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+
+                </select>
+
+            </div>
+                    <div class="col-md-4">
+                        <input type="submit" value="Filter" />
+                    </div>
+            
+            </div>
+</p> 
+    }
+</p>
+     
+<table class="table table-hover ;table-responsive table-bordered table-condensed">
+    <tr>
+        
+       
+        <th>
+            @Html.DisplayNameFor(model => model.DonorNo)
+        </th>
+      
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        
+       
+        <th>
+            @Html.DisplayNameFor(model => model.BloodGroup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastDonation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoOfDonation)
+        </th>
+      
+        <th>
+            @Html.DisplayNameFor(model => model.District)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.HBsAg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HCV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HIV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Syphilis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Malaria)
+        </th>
+        <th>Days till Dnonation</th>
+        <th>Details</th>
+    </tr>
+  @* @{ int i = 0;}*@
+    
+        @foreach (var item in Model)
+        {
+           
+<tr>
+               
+    
+        
+            <td>
+                @Html.DisplayFor(modelItem => item.DonorNo)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.BloodGroup)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastDonation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoOfDonation)
+            </td>
+
+
+            <td>
+                @Html.DisplayFor(modelItem => item.District)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.HBsAg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HCV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HIV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Syphilis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Malaria)
+            </td>
+            <td>
+                @{
+                    DateTime d1 = item.LastDonation;
+                    DateTime d2 = DateTime.Today;
+                    TimeSpan t = d2 - d1;
+                    Double NrOfDays = t.TotalDays;
+                    if (NrOfDays < 0)
+                    {
+                        NrOfDays = 0;
+                    }
+                }
+                @NrOfDays
+            </td>
+            <td>
+                @Html.ActionLink("More Details", "Details", new { id = item.ID })
+
+            </td>
+            
+        
+            </tr>
+
+   
+   
+
+        }
+    
+    
+
+    
+</table>
+         
+    @Html.ActionLink("Show Selected","showReacted","BloodDonorInfoes")
+    <script>
+        var count = 0;
+        function myFunction() {
+
+    return count + 1;
+}
+        document.getElementById("demo").innerHTML = myFunction();
+
+
+       
+    </script>
+
+
+    @if (Model.Count() == 0)
+    { <h3 style="color:red">No Result Found!</h3>}
+   
+    </body>

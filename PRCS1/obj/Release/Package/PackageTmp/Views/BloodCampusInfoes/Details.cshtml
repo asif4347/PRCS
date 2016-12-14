@@ -1,0 +1,92 @@
+﻿@model PRCS1.Models.BloodCampusInfo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BloodCampusInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BloodCampus)
+        </dt>
+        
+        <dd>
+            @Html.DisplayFor(model => model.BloodCampus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StartTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InstituteName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InstituteName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InstituteAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InstituteAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InstituteDistrict)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InstituteDistrict)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeansContact)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeansContact)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SocietyContact)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SocietyContact)
+        </dd>
+       <dt>
+        @Html.DisplayNameFor(model => model.NoOfBagsDay1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NoOfBagsDay1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NoOfBagsDay2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoOfBagsDay2)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -78,7 +78,7 @@ namespace PRCS.Models
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
        
-        [Display(Name ="Donor's Reaction")]
+      //  [Display(Name ="Donor's Reaction")]
         public string DonorReaction { get; set; }
         public string Haematioma { get; set; }
         public string Nausia { get; set; }
@@ -86,7 +86,7 @@ namespace PRCS.Models
         public string  Dizziness { get; set; }
         public string Fainting { get; set; }
         public string Convulsions { get; set; }
-        [Display(Name = "Select Donor")]
+       // [Display(Name = "Select Donor")]
         public string isSelected { get; set; }
     }
 

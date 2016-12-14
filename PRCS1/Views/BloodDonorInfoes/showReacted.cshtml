@@ -3,6 +3,7 @@
     ViewBag.Title = "Show Selected";
 }
 
+
 <h2>Members who donated</h2>
 <table class="table table-hover table-responsive table-bordered table-condensed">
     <tr>
@@ -99,8 +100,9 @@
                     {
                         NrOfDays = 0;
                     }
+                    int n = Convert.ToInt32(NrOfDays);
                 }
-                @NrOfDays
+                @n
             </td>
             <td>
                 @Html.ActionLink("More Details", "Details", new { id = item.ID })

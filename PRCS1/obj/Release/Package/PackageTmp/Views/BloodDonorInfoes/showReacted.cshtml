@@ -1,0 +1,112 @@
+﻿@model IEnumerable<PRCS.Models.BloodDonorInfo>
+@{
+    ViewBag.Title = "Show Selected";
+}
+
+<h2>Members who donated</h2>
+<table class="table table-hover table-responsive table-bordered table-condensed">
+    <tr>
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.DonorNo)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.BloodGroup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastDonation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoOfDonation)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.District)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.HBsAg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HCV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HIV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Syphilis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Malaria)
+        </th>
+        <th>Days till Last Donation</th>
+        
+        <th>Details</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonorNo)
+        </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.BloodGroup)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastDonation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NoOfDonation)
+                </td>
+
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.District)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HBsAg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HCV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HIV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Syphilis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Malaria)
+            </td>
+            <td>
+                @{
+                    DateTime d1 = item.LastDonation;
+                    DateTime d2 = DateTime.Today;
+                    TimeSpan t = d2 - d1;
+                    Double NrOfDays = t.TotalDays;
+                    if (NrOfDays < 0)
+                    {
+                        NrOfDays = 0;
+                    }
+                }
+                @NrOfDays
+            </td>
+            <td>
+                @Html.ActionLink("More Details", "Details", new { id = item.ID })
+
+            </td>
+            
+</tr>
+    }
+    </table>

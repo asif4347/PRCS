@@ -210,10 +210,11 @@
 
     </dl>
     </div>
-@Html.ActionLink("Select For Donation", "select", new { id = Model.ID })
 <p>
+   
+    @Html.ActionLink("Back to List", "Index")|
+    @Html.ActionLink("Select For Donation", "select", null, new { id = Model.ID }, new { @class = "btn btn-success btn-large" })
     
-    @Html.ActionLink("Back to List", "Index")
     
 </p>
 @Scripts.Render("~/bundles/jqueryval")

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="prcs" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\masif\\Documents\\GitHub\\PRCS\\PRCS1\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\masif\\Documents\\GitHub\\PRCS\\PRCS1\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="BloodDbContext-Web.config Connection String" description="" value="Data Source=prcs.scm.azurewebsites.net:443;Persist Security Info=True;User ID=asif4347;Password=Shahzada007@" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\masif\\Documents\\GitHub\\PRCS\\PRCS1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BloodDbContext']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=prcs.scm.azurewebsites.net:443;Persist Security Info=True;User ID=asif4347;Password=Shahzada007@" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\masif\\Documents\\GitHub\\PRCS\\PRCS1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="prcs-Web.config Connection String" description="" value="Server=tcp:prcs.database.windows.net,1433;Initial Catalog=PRCS;Persist Security Info=False;User ID={asif4347};Password={Shahzada007@};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\masif\\Documents\\GitHub\\PRCS\\PRCS1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='prcs']/@connectionString" />
+  </parameter>
+</parameters>

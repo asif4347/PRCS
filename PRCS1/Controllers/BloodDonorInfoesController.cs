@@ -54,7 +54,7 @@ namespace PRCS1.Controllers
             blood = blood.Where(hbs => hbs.HBsAg.Contains("NonReactive"));
             blood = blood.Where(syp => syp.Syphilis.Contains("NonReactive"));
             blood = blood.Where(mal => mal.Malaria.Contains("NonReactive"));
-            
+          //  blood = blood.Where(mal => mal.isSelected.Contains(null));
             return View(blood);
 
 
@@ -64,6 +64,7 @@ namespace PRCS1.Controllers
         {
             var blood = from m in db.BloodInfo
                         select m;
+            
             blood = blood.Where(l => l.isSelected.Contains("Selected"));
             return View(blood);
         }
@@ -88,16 +89,29 @@ namespace PRCS1.Controllers
         {
             return View();
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "ID,DonorNo,SerialNo,Name,SonOf,Gender,DOB,Weight,BloodGroup,LastDonation,NoOfDonation,Adress,District,PermanentDonor,HBsAg,HCV,HIV,Syphilis,Malaria,,Institute,Class,TelResidance,TelOffice,FAX,Mobile,Email,Haematioma,Nausia,Vom,Dizziness,Fainting,Convulsions,DonorReaction,isSelected")] BloodDonorInfo bloodDonorInfo)
+        {
+            if (ModelState.IsValid)
+            {
+                db.BloodInfo.Add(bloodDonorInfo);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(bloodDonorInfo);
+        }
 
         // POST: BloodDonorInfoes/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-       public ActionResult select(int ?id)
+        public ActionResult select(int ?id)
         {
             db.BloodInfo.Find(id).isSelected = "Selected";
             db.BloodInfo.Find(id).LastDonation = DateTime.Now;
             //DateTime d1 = db.BloodInfo.Find(id).LastDonation;
-            
+            db.BloodInfo.Find(id).NoOfDonation += 1;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -122,7 +136,7 @@ namespace PRCS1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,DonorNo,SerialNo,Name,SonOf,Gender,DOB,Weight,BloodGroup,LastDonation,NoOfDonation,Adress,District,PermanentDonor,HBsAg,HCV,HIV,Syphilis,Malaria,,Institute,Class,TelResidance,TelOffice,FAX,Mobile,Email,Haematioma,Nausia,Vom,Dizziness,Fainting,Convulsions")] BloodDonorInfo bloodDonorInfo)
+        public ActionResult Edit([Bind(Include = "ID,DonorNo,SerialNo,Name,SonOf,Gender,DOB,Weight,BloodGroup,LastDonation,NoOfDonation,Adress,District,PermanentDonor,HBsAg,HCV,HIV,Syphilis,Malaria,,Institute,Class,TelResidance,TelOffice,FAX,Mobile,Email,Haematioma,Nausia,Vom,Dizziness,Fainting,Convulsions,DonorReaction,isSelected")] BloodDonorInfo bloodDonorInfo)
         {
             if (ModelState.IsValid)
             {

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-PRCS1-20161117113234.mdf;Initial Catalog=aspnet-PRCS1-20161117113234;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\masif\\Documents\\GitHub\\PRCS\\PRCS1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="BloodDbContext-Web.config Connection String" description="BloodDbContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-PRCS1-20161117113234.mdf;Initial Catalog=aspnet-PRCS1-20161117113234;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\masif\\Documents\\GitHub\\PRCS\\PRCS1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BloodDbContext']/@connectionString" />
+  </parameter>
+  <parameter name="prcs-Web.config Connection String" description="prcs Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:prcs.database.windows.net,1433;Initial Catalog=PRCS;Persist Security Info=False;User ID={asif4347};Password={Shahzada007@};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\masif\\Documents\\GitHub\\PRCS\\PRCS1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='prcs']/@connectionString" />
+  </parameter>
+</parameters>
