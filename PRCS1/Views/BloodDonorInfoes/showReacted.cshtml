@@ -46,6 +46,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Malaria)
         </th>
+       
         <th>Days till Last Donation</th>
         
         <th>Details</th>
@@ -90,6 +91,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Malaria)
             </td>
+            
             <td>
                 @{
                     DateTime d1 = item.LastDonation;

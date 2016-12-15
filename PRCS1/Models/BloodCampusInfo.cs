@@ -15,8 +15,6 @@ namespace PRCS1.Models
         public string BloodCampus { get; set; }
         [Display(Name ="Start Time")]
         [Required]
-
-
         [DataType(DataType.Time)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:hh:mm tt}")]
         public DateTime? StartTime { get; set; }

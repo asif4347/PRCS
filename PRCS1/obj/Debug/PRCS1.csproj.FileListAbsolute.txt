@@ -161,3 +161,12 @@ C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.initial17.
 C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.initial18.resources
 C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.initail.resources
 C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.initial19.resources
+C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.patient.resources
+C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.dropPatient.resources
+C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.patient1.resources
+C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.initial20.resources
+C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.initial21.resources
+C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.init.resources
+C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.iniit.resources
+C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.iiii.resources
+C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.iii.resources

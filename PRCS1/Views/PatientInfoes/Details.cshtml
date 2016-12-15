@@ -1,0 +1,82 @@
+﻿@model PRCS1.Models.PatientInfo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PatientInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PresBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PresBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cause)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cause)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.crossMatch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.crossMatch)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.issueDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.issueDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdverseReaction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdverseReaction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Details)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Details)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

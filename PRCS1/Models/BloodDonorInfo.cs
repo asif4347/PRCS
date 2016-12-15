@@ -88,6 +88,25 @@ namespace PRCS.Models
         public string Convulsions { get; set; }
        // [Display(Name = "Select Donor")]
         public string isSelected { get; set; }
+        public string PatientName { get; set; }
+
+        public string PresBy { get; set; }
+
+        public string Cause { get; set; }
+
+        public string crossMatch { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+
+        public DateTime issueDate { get; set; }
+
+      //  public DateTime? StartTime { get; set; }
+
+        public string AdverseReaction { get; set; }
+        public string Details { get; set; }
+
+
+
     }
 
     public class BloodDbContext : DbContext
@@ -95,7 +114,7 @@ namespace PRCS.Models
 
         public DbSet<BloodDonorInfo> BloodInfo { get; set; }
         public DbSet<BloodCampusInfo> CampusInfo { get; set; }
-
+        public DbSet<PatientInfo> patientInfo { get; set; }
     }
 
 }

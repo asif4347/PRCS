@@ -172,6 +172,7 @@
     <Compile Include="Controllers\BloodDonorInfoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PatientInfoesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -271,12 +272,49 @@
     <Compile Include="Migrations\201612070754486_initial19.Designer.cs">
       <DependentUpon>201612070754486_initial19.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612141514017_patient.cs" />
+    <Compile Include="Migrations\201612141514017_patient.Designer.cs">
+      <DependentUpon>201612141514017_patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612141530501_dropPatient.cs" />
+    <Compile Include="Migrations\201612141530501_dropPatient.Designer.cs">
+      <DependentUpon>201612141530501_dropPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612141553269_patient1.cs" />
+    <Compile Include="Migrations\201612141553269_patient1.Designer.cs">
+      <DependentUpon>201612141553269_patient1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612151049391_initial20.cs" />
+    <Compile Include="Migrations\201612151049391_initial20.Designer.cs">
+      <DependentUpon>201612151049391_initial20.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612151207498_initial21.cs" />
+    <Compile Include="Migrations\201612151207498_initial21.Designer.cs">
+      <DependentUpon>201612151207498_initial21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612151214106_init.cs" />
+    <Compile Include="Migrations\201612151214106_init.Designer.cs">
+      <DependentUpon>201612151214106_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612151430139_iniit.cs" />
+    <Compile Include="Migrations\201612151430139_iniit.Designer.cs">
+      <DependentUpon>201612151430139_iniit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612151501038_iiii.cs" />
+    <Compile Include="Migrations\201612151501038_iiii.Designer.cs">
+      <DependentUpon>201612151501038_iiii.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612151511511_iii.cs" />
+    <Compile Include="Migrations\201612151511511_iii.Designer.cs">
+      <DependentUpon>201612151511511_iii.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BloodCampusInfo.cs" />
     <Compile Include="Models\BloodDonorInfo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PatientInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -351,6 +389,13 @@
     <Content Include="Views\BloodCampusInfoes\Edit.cshtml" />
     <Content Include="Views\BloodCampusInfoes\Index.cshtml" />
     <Content Include="Views\BloodDonorInfoes\showReacted.cshtml" />
+    <Content Include="Views\PatientInfoes\Create.cshtml" />
+    <Content Include="Views\PatientInfoes\Delete.cshtml" />
+    <Content Include="Views\PatientInfoes\Details.cshtml" />
+    <Content Include="Views\PatientInfoes\Edit.cshtml" />
+    <Content Include="Views\PatientInfoes\Index.cshtml" />
+    <Content Include="Views\BloodDonorInfoes\patient.cshtml" />
+    <Content Include="Views\BloodDonorInfoes\select.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -435,6 +480,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612070754486_initial19.resx">
       <DependentUpon>201612070754486_initial19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612141514017_patient.resx">
+      <DependentUpon>201612141514017_patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612141530501_dropPatient.resx">
+      <DependentUpon>201612141530501_dropPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612141553269_patient1.resx">
+      <DependentUpon>201612141553269_patient1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612151049391_initial20.resx">
+      <DependentUpon>201612151049391_initial20.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612151207498_initial21.resx">
+      <DependentUpon>201612151207498_initial21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612151214106_init.resx">
+      <DependentUpon>201612151214106_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612151430139_iniit.resx">
+      <DependentUpon>201612151430139_iniit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612151501038_iiii.resx">
+      <DependentUpon>201612151501038_iiii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612151511511_iii.resx">
+      <DependentUpon>201612151511511_iii.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
