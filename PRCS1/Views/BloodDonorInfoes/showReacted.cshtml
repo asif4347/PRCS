@@ -1,10 +1,11 @@
 ﻿@model IEnumerable<PRCS.Models.BloodDonorInfo>
 @{
     ViewBag.Title = "Show Selected";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 
-<h2>Members who donated</h2>
+<h2>Blood Issued Patients</h2>
 <table class="table table-hover table-responsive table-bordered table-condensed">
     <tr>
 
@@ -14,40 +15,29 @@
         </th>
 
         <th>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.PatientName)
         </th>
 
         <th>
-            @Html.DisplayNameFor(model => model.BloodGroup)
+            @Html.DisplayNameFor(model => model.PresBy)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LastDonation)
+            @Html.DisplayNameFor(model => model.Cause)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NoOfDonation)
+            @Html.DisplayNameFor(model => model.crossMatch)
         </th>
 
         <th>
-            @Html.DisplayNameFor(model => model.District)
+            @Html.DisplayNameFor(model => model.issueDate)
         </th>
 
         <th>
-            @Html.DisplayNameFor(model => model.HBsAg)
+            @Html.DisplayNameFor(model => model.AdverseReaction)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HCV)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HIV)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Syphilis)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Malaria)
-        </th>
+        
+       <th></th>
        
-        <th>Days till Last Donation</th>
         
         <th>Details</th>
     </tr>
@@ -59,58 +49,38 @@
         </td>
 
                 <td>
-                    @Html.DisplayFor(modelItem => item.Name)
+                    @Html.DisplayFor(modelItem => item.PatientName)
                 </td>
 
                 <td>
-                    @Html.DisplayFor(modelItem => item.BloodGroup)
+                    @Html.DisplayFor(modelItem => item.PresBy)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.LastDonation)
+                    @Html.DisplayFor(modelItem => item.Cause)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.NoOfDonation)
+                    @Html.DisplayFor(modelItem => item.crossMatch)
                 </td>
 
 
                 <td>
-                    @Html.DisplayFor(modelItem => item.District)
+                    @Html.DisplayFor(modelItem => item.issueDate)
                 </td>
             <td>
-                @Html.DisplayFor(modelItem => item.HBsAg)
+                @Html.DisplayFor(modelItem => item.AdverseReaction)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.HCV)
+                @Html.DisplayFor(modelItem => item.Details)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HIV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Syphilis)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Malaria)
-            </td>
+           
             
+           
             <td>
-                @{
-                    DateTime d1 = item.LastDonation;
-                    DateTime d2 = DateTime.Today;
-                    TimeSpan t = d2 - d1;
-                    Double NrOfDays = t.TotalDays;
-                    if (NrOfDays < 0)
-                    {
-                        NrOfDays = 0;
-                    }
-                    int n = Convert.ToInt32(NrOfDays);
-                }
-                @n
-            </td>
-            <td>
-                @Html.ActionLink("More Details", "Details", new { id = item.ID })
+                @Html.ActionLink("Donor Info", "Details", new { id = item.ID })
 
             </td>
             
 </tr>
     }
     </table>
+

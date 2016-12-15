@@ -1,20 +1,31 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - PRCS Blood Donor Center</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
     <style>
-        div.hidden {
+    div.hidden {
     visibility: hidden;
-}
-    </style>
+    }</style>
+    <meta charset="utf-8">
+    <title>PRCS-Blood Donation System</title>
+    <!-- Stylesheets -->
+    <link href="~/css/bootstrap.css" rel="stylesheet">
+    <link href="~/css/revolution-slider.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="~/images/prcs.png" type="image/x-icon">
+    <link rel="icon" href="~/images/prcs.png" type="image/x-icon">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="~/css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>
+
 <body>
     
-    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:whitesmoke" >
+    @*<div class="navbar navbar-inverse navbar-fixed-top" style="background-color:whitesmoke" >
        
         <div class="container" >
             <h3 style="color:red; text-align:center">P.R.C.S Blood Donor Center</h3>
@@ -40,18 +51,185 @@
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        <br/><br /><br /><br />
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year -P.R.C.S Blood Donor Center.    All Rights Reserved</p>
-        </footer>
-    </div>
+    </div>*@
+    <div class="page-wrapper">
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+        <!-- Preloader -->
+        <div class="preloader"><div class="loader"><div class="cssload-container"><div class="cssload-speeding-wheel"></div></div></div></div>
+
+        <!-- Main Header -->
+       
+        <!--End Main Header -->
+
+        <div class="container body-content">
+            <header class="main-header">
+                <!-- Header Top -->
+                <div class="header-top">
+                    <div class="auto-container clearfix">
+                        <!-- Top Left -->
+                        
+
+                        <!-- Top Right -->
+                        <div class="top-right">
+                            <ul class="clearfix">
+                                <li>@Html.Partial("_LoginPartial")</li>
+                            </ul>
+
+                            <!--Social Links One-->
+                            <ul class="social-links-one clearfix">
+                                <li><a class="fa fa-facebook" href="#"></a></li>
+                                <li><a class="fa fa-twitter" href="#"></a></li>
+                                <li><a class="fa fa-link" href="#"></a></li>
+                                <li><a class="fa fa-vimeo" href="#"></a></li>
+                                <li><a class="fa fa-pinterest-p" href="#"></a></li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Header Top End -->
+                <!--Header-Upper-->
+                <div class="header-upper">
+                    <div class="pull-left logo-outer">
+                        <div class="logo"><img src="~/images/prcs.png" alt="" title="Brussals"></div>
+                    </div>
+                    <br>
+                    <h1 style="text-align:center; color:red"> PRCS Blood Donation System</h1>
+</div>
+                <!--Header-Lower-->
+                <br/><br />
+                <div class="header-lower">
+                    <div class="auto-container">
+                        <div class="nav-outer clearfix">
+                            <!-- Main Menu -->
+                            <nav class="main-menu">
+                                <div class="navbar-header">
+                                    <!-- Toggle Button -->
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li >
+                                            @Html.ActionLink("Home","Index","Home")
+                                        
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">Blood Donor ></a>
+                                            <ul>
+                                                <li>@Html.ActionLink("View Available Donors", "Index", "BloodDonorInfoes")</li>
+                                                <li>@Html.ActionLink("Add Donor", "Create", "BloodDonorInfoes")</li>
+                                            </ul>
+                                        </li>
+                                        <li>@Html.ActionLink("Blood Camps", "Index", "BloodCampusInfoes")</li>
+
+                                        
+                                        <li>@Html.ActionLink("Blood Issuance","showReacted", "BloodDonorInfoes")</li>
+                                        @*<li class="dropdown">
+                                            <a href="#">Events</a>
+                                            <ul>
+                                                <li><a href="events.html">Events</a></li>
+                                                <li><a href="events-single.html">Events Single</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">Portfolio</a>
+                                            <ul>
+                                                <li><a href="portfolio-three-column.html">Portfolio Three Column</a></li>
+                                                <li><a href="portfolio-masonry.html">Portfolio Masonry</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown">
+                                            <a href="#">Blog</a>
+                                            <ul>
+                                                <li><a href="blog.html">Blog</a></li>
+                                                <li><a href="blog-single.html">Blog Single</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact.html">Contact Me</a></li>*@
+                                    </ul>
+                                </div>
+                            </nav><!-- Main Menu End-->
+
+                            
+                            
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--Bounce In Header-->
+                <div class="bounce-in-header">
+                    <div class="auto-container clearfix">
+                        <!--Logo-->
+                        @*<div class="logo pull-left">
+                            <img src="~/images/small1.jpg"s alt="">
+                        </div>*@
+
+                        <!--Right Col-->
+                        <div class="right-col pull-right">
+                            <!-- Main Menu -->
+                            <nav class="main-menu">
+                                <div class="navbar-header">
+                                    <!-- Toggle Button -->
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li>
+                                            @Html.ActionLink("Home", "Index", "Home")
+
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#">Blood Donor ></a>
+                                            <ul>
+                                                <li>@Html.ActionLink("View Available Donors", "Index", "BloodDonorInfoes")</li>
+                                                <li>@Html.ActionLink("Add Donor", "Create", "BloodDonorInfoes")</li>
+                                            </ul>
+                                        </li>
+                                        <li>@Html.ActionLink("Blood Camps", "Index", "BloodCampusInfoes")</li>
+
+
+                                        <li>@Html.ActionLink("Blood Issuance", "showReacted", "BloodDonorInfoes")</li>
+
+                                    </ul>
+                                </div>
+                            </nav><!-- Main Menu End-->
+                        </div>
+
+                    </div>
+                </div>
+
+            </header>
+            
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year -P.R.C.S Blood Donor Center.    All Rights Reserved</p>
+            </footer>
+        </div></div>
+        <script src="~/js/jquery.js"></script>
+        <script src="~/js/bootstrap.min.js"></script>
+        <script src="~/js/revolution.min.js"></script>
+        <script src="~/js/jquery.fancybox.pack.js"></script>
+        <script src="~/js/jquery.fancybox-media.js"></script>
+        <script src="~/js/owl.js"></script>
+        <script src="~/js/validate.js"></script>
+        <script src="~/js/wow.js"></script>
+        <script src="~/js/script.js"></script>
+        @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")*@
+        @RenderSection("scripts", required: false)
 </body>
 </html>

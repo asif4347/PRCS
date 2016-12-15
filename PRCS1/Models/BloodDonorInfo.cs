@@ -114,7 +114,7 @@ namespace PRCS.Models
 
         public DbSet<BloodDonorInfo> BloodInfo { get; set; }
         public DbSet<BloodCampusInfo> CampusInfo { get; set; }
-        public DbSet<PatientInfo> patientInfo { get; set; }
+      //  public DbSet<PatientInfo> patientInfo { get; set; }
     }
 
 }
