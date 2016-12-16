@@ -125,7 +125,7 @@ namespace PRCS1.Controllers
             {
                 db.Entry(bloodDonorInfo).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("showReacted");
             }
             return View(bloodDonorInfo);
         }

@@ -22,35 +22,43 @@
     <p>
         <div class="form-horizontal">
           
-                
-                <div class="col-md-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        Search
+                    </div>
+                    <div class="panel-body">
 
-                    District: @Html.TextBox("Dist") <br /><br />
+                        <div class="col-md-3">
 
-                
+                            District: @Html.TextBox("Dist") <br /><br />
+
+
+                        </div>
+
+
+                        <div class="col-md-3">
+                            Blood Group: @Html.DropDownList("bloodGroup", "All")<br /><br />
+                        </div>
+
+                        <div class="col-md-3">
+                            Area: @Html.TextBox("sName") <br /><br />
+                        </div>
+                        <div class="col-md-3">
+                            Gender:
+                            <select class="list-group-item-text" name="gender" style="height:30px">
+                                <option value="">-- select --</option>
+                                <option value="M">Male</option>
+                                <option value="F">Female</option>
+
+                            </select>
+
+                        </div>
+                        <div class="col-md-4">
+                            <input type="submit" value="Search" class="btn btn-primary" />
+                        </div>
+                    </div>
                 </div>
-
-                
-                    <div class="col-md-3">
-                        Blood Group: @Html.DropDownList("bloodGroup", "All")<br /><br />
-                    </div>
-               
-                    <div class="col-md-3">
-                        Area: @Html.TextBox("sName") <br /><br />
-                    </div>
-            <div class="col-md-3">
-                Gender:
-                <select class="list-group-item-text" name="gender" style="height:30px">
-                    <option value="">-- select --</option>
-                    <option value="M">Male</option>
-                    <option value="F">Female</option>
-
-                </select>
-
-            </div>
-                    <div class="col-md-4">
-                        <input type="submit" value="Filter" />
-                    </div>
+            
             
             </div>
 </p> 
