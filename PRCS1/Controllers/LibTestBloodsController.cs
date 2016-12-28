@@ -11,6 +11,7 @@ using PRCS1.Models;
 
 namespace PRCS1.Controllers
 {
+    [Authorize]
     public class LibTestBloodsController : Controller
     {
         private BloodDbContext db = new BloodDbContext();
