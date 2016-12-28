@@ -95,7 +95,7 @@
                         <div class="logo"><img src="~/images/prcs.png" alt="" title="Brussals"></div>
                     </div>
                     <br>
-                    <h1 style="text-align:center;font-family:'Times New Roman'; font-size:400%; color:red"> PRCS Blood Donation System</h1>
+                    <h2 style="text-align:center;font-family:'Times New Roman'; font-size:400%; color:red">Thalassemia Centre And Blood Bank P.R.C Punjab</h2>
 </div>
                 <!--Header-Lower-->
                 <br/><br />
@@ -115,9 +115,9 @@
 
                                 <div class="navbar-collapse collapse clearfix">
                                     <ul class="navigation clearfix">
-                                        <li >
-                                            @Html.ActionLink("Home","Index","Home")
-                                        
+                                        <li>
+                                            @Html.ActionLink("Home", "Index", "Home")
+
                                         </li>
                                         <li class="dropdown">
                                             <a href="#">Blood Donor ></a>
@@ -127,41 +127,46 @@
                                             </ul>
                                         </li>
                                         <li>@Html.ActionLink("Blood Camps", "Index", "BloodCampusInfoes")</li>
+                                        <li class="dropdown">
+                                            <a href="#">Blood Issuance ></a>
+                                            <ul>
 
-                                        
-                                        <li>@Html.ActionLink("Blood Issuance","showReacted", "BloodDonorInfoes")</li>
-                                        <li class="dropdown">
-                                            <a href="#">Blood Bank Liboratory ></a>
-                                            <ul>
-                                                <li>@Html.ActionLink("Test by Blood Bank", "Index", "BloodBankTests")</li>
-                                                <li>@Html.ActionLink("Test by Clinical Lib", "Index", "LibTestBloods")</li>
-                                                </ul>
-                                        </li>
-                                         @*<li class="dropdown">
-                                            <a href="#">Events</a>
-                                            <ul>
-                                                <li><a href="events.html">Events</a></li>
-                                                <li><a href="events-single.html">Events Single</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a href="#">Portfolio</a>
-                                            <ul>
-                                                <li><a href="portfolio-three-column.html">Portfolio Three Column</a></li>
-                                                <li><a href="portfolio-masonry.html">Portfolio Masonry</a></li>
-                                            </ul>
-                                        </li>
+                                                <li>@Html.ActionLink("To Other Patients", "showReacted", "BloodDonorInfoes")</li>
+                                                <li>@Html.ActionLink("To Thalassemia", "Index", "ThalassimiaInfoes")</li>
+                                               </ul>
+                                            </li>
+                                                 <li class="dropdown">
+                                                    <a href="#">Blood Bank Liboratory ></a>
+                                                    <ul>
+                                                        <li>@Html.ActionLink("Test by Blood Bank", "Index", "BloodBankTests")</li>
+                                                        <li>@Html.ActionLink("Test by Clinical Lib", "Index", "LibTestBloods")</li>
+                                                    </ul>
+                                                </li>
+                                                @*<li class="dropdown">
+                        <a href="#">Events</a>
+                        <ul>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="events-single.html">Events Single</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Portfolio</a>
+                        <ul>
+                            <li><a href="portfolio-three-column.html">Portfolio Three Column</a></li>
+                            <li><a href="portfolio-masonry.html">Portfolio Masonry</a></li>
+                        </ul>
+                    </li>
 
-                                        <li class="dropdown">
-                                            <a href="#">Blog</a>
-                                            <ul>
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="blog-single.html">Blog Single</a></li>
+                    <li class="dropdown">
+                        <a href="#">Blog</a>
+                        <ul>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="blog-single.html">Blog Single</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact Me</a></li>*@
                                             </ul>
-                                        </li>
-                                        <li><a href="contact.html">Contact Me</a></li>*@
-                                    </ul>
-                                </div>
+</div>
                             </nav><!-- Main Menu End-->
 
                             
@@ -208,7 +213,14 @@
                                         <li>@Html.ActionLink("Blood Camps", "Index", "BloodCampusInfoes")</li>
 
 
-                                        <li>@Html.ActionLink("Blood Issuance", "showReacted", "BloodDonorInfoes")</li>
+                                        <li class="dropdown">
+                                            <a href="#">Blood Issuance ></a>
+                                            <ul>
+
+                                                <li>@Html.ActionLink("To Other Patients", "showReacted", "BloodDonorInfoes")</li>
+                                                <li>@Html.ActionLink("To Thalassemia", "Index", "ThalassimiaInfoes")</li>
+                                            </ul>
+                                        </li>
                                         <li class="dropdown">
                                             <a href="#">Blood Bank Liboratory ></a>
                                             <ul>
@@ -228,10 +240,23 @@
             
             @RenderBody()
             <hr />
-            <footer>
-                <p>&copy; @DateTime.Now.Year -P.R.C.S Blood Donor Center. All Rights Reserved</p>
-                <p>Developer: M Asif(TrodoSoft)</p>
-            </footer>
+            <footer >
+               
+                  <div class="auto-container clearfix">
+                      
+                    <ul class="social-links-one clearfix">
+                        <li><strong>Follow us at: </strong></li>
+                        <li><a class="fa fa-facebook" href="https://www.facebook.com/pakistanredcrescentpunjab/"></a></li>
+                        <li><a class="fa fa-twitter" href="#"></a></li>
+                        <li><a class="fa fa-link" href="#"></a></li>
+                        <li><a class="fa fa-vimeo" href="#"></a></li>
+                        <li><a class="fa fa-pinterest-p" href="#"></a></li>
+                    </ul>
+                    </div>
+                <p>&copy; @DateTime.Now.Year -Thalassemia Centre And Blood Bank P.R.C Punjab. All Rights Reserved</p>
+
+                    <p>Developer: M Asif(TrodoSoft)</p>
+</footer>
         </div></div>
         <script src="~/js/jquery.js"></script>
         <script src="~/js/bootstrap.min.js"></script>

@@ -119,6 +119,7 @@ namespace PRCS.Models
         public DbSet<BloodCampusInfo> CampusInfo { get; set; }
         public DbSet<LibTestBlood> LibTest { get; set; }
         public DbSet<BloodBankTest> BloodBank { get; set; }
+        public DbSet<ThalassimiaInfo> Thalassimia { get; set; }
                                            //  public DbSet<PatientInfo> patientInfo { get; set; }
     }
 

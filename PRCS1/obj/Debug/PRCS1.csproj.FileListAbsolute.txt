@@ -175,3 +175,4 @@ C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.final_mig.
 C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.fin_mig.resources
 C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.Lib_add.resources
 C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.Blood_bank.resources
+C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.thalasimai.resources
