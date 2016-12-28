@@ -171,3 +171,7 @@ C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.iniit.reso
 C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.iiii.resources
 C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.iii.resources
 C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.initial22.resources
+C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.final_mig.resources
+C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.fin_mig.resources
+C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.Lib_add.resources
+C:\Users\masif\Documents\GitHub\PRCS\PRCS1\obj\Debug\PRCS1.Migrations.Blood_bank.resources

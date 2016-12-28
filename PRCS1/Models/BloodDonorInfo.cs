@@ -75,19 +75,22 @@ namespace PRCS.Models
        
         [DataType(DataType.PhoneNumber)]
         public string Mobile { get; set; }
+        
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
        
       //  [Display(Name ="Donor's Reaction")]
         public string DonorReaction { get; set; }
-        public string Haematioma { get; set; }
+        public string Other { get; set; }
         public string Nausia { get; set; }
+        [Display(Name = "Vometing")]
         public string Vom { get; set; }
         public string  Dizziness { get; set; }
         public string Fainting { get; set; }
         public string Convulsions { get; set; }
        // [Display(Name = "Select Donor")]
         public string isSelected { get; set; }
+        [Display(Name="Patient Name")]
         public string PatientName { get; set; }
 
         public string PresBy { get; set; }
@@ -114,7 +117,9 @@ namespace PRCS.Models
 
         public DbSet<BloodDonorInfo> BloodInfo { get; set; }
         public DbSet<BloodCampusInfo> CampusInfo { get; set; }
-      //  public DbSet<PatientInfo> patientInfo { get; set; }
+        public DbSet<LibTestBlood> LibTest { get; set; }
+        public DbSet<BloodBankTest> BloodBank { get; set; }
+                                           //  public DbSet<PatientInfo> patientInfo { get; set; }
     }
 
 }
