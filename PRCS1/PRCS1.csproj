@@ -334,6 +334,10 @@
     <Compile Include="Migrations\201612282052247_thalasimai.Designer.cs">
       <DependentUpon>201612282052247_thalasimai.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701010941479_thala.cs" />
+    <Compile Include="Migrations\201701010941479_thala.Designer.cs">
+      <DependentUpon>201701010941479_thala.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BloodBankTest.cs" />
@@ -632,6 +636,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612282052247_thalasimai.resx">
       <DependentUpon>201612282052247_thalasimai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701010941479_thala.resx">
+      <DependentUpon>201701010941479_thala.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

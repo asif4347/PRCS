@@ -38,8 +38,13 @@ namespace PRCS1.Controllers
         }
 
         // GET: ThalassimiaInfoes/Create
-        public ActionResult Create()
+        public ActionResult Create(int? id)
         {
+
+            db.BloodInfo.Find(id).isSelected = "Selected";
+            db.BloodInfo.Find(id).LastDonation = DateTime.Now;
+            db.BloodInfo.Find(id).NoOfDonation++;
+            db.SaveChanges();
             return View();
         }
 

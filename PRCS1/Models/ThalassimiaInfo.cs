@@ -8,6 +8,7 @@ namespace PRCS1.Models
     public class ThalassimiaInfo
     {
         public int ID { get; set; }
+        public string DonorNumber { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
         public string Contact { get; set; }
