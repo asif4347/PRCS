@@ -214,8 +214,24 @@
 <p>
    
     @Html.ActionLink("Back to List", "Index")|
-    @Html.ActionLink("Select For Donation", "select", null, new { id = Model.ID }, new { @class = "btn btn-success btn-large" })
-    @Html.ActionLink("Select For Thalassimia","Create","ThalassimiaInfoes" ,  new { id = Model.ID }, new { @class = "btn btn-success btn-large" })
-    
+    @{
+             DateTime d1 = Model.LastDonation;
+        DateTime d2 = DateTime.Today;
+        TimeSpan t = d2 - d1;
+        Double NrOfDays = t.TotalDays;
+        if (NrOfDays < 0)
+        {
+            NrOfDays = 0;
+        }
+        int n = Convert.ToInt32(NrOfDays);
+
+     }
+   @if (n >= 120)
+   {
+    @Html.ActionLink("Select For Other Patient", "select", null, new { id = Model.ID }, new { @class = "btn btn-success btn-large" })  
+    @Html.ActionLink("Select For Thalassimia", "Create", "ThalassimiaInfoes", new { id = Model.ID }, new { @class = "btn btn-success btn-large" })
+
+   }
+   
 </p>
 @Scripts.Render("~/bundles/jqueryval")

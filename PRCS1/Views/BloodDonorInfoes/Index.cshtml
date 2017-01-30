@@ -28,31 +28,33 @@
                     </div>
                     <div class="panel-body">
 
-                        <div class="col-md-3" style="color:gray">
+                        <div class="col-md-3" style="color:gray" >
                           
-                            District: @Html.TextBox("Dist") <br /><br />
+                            District:<div style="border:solid"> @Html.TextBox("Dist")</div> <br /><br />
 
 
                         </div>
 
 
                         <div class="col-md-3">
-                            Blood Group: @Html.DropDownList("bloodGroup", "All")<br /><br />
-                        </div>
+                            Blood Group:<div style="border:solid">
+    @Html.DropDownList("bloodGroup", "---All---")</div><br /><br />
+</div>
 
                         <div class="col-md-3">
-                            Area: @Html.TextBox("sName") <br /><br />
-                        </div>
+                            Area:<div style="border:solid">
+    @Html.TextBox("sName")</div> <br /><br />
+</div>
                         <div class="col-md-3">
-                            Gender:
-                            <select class="list-group-item-text" name="gender" style="height:30px">
-                                <option value="">-- select --</option>
-                                <option value="M">Male</option>
-                                <option value="F">Female</option>
+                            Gender:<div style="border:solid">
+    <select class="list-group-item-text" name="gender" style="height:30px">
+        <option value="">-- select --</option>
+        <option value="M">Male</option>
+        <option value="F">Female</option>
 
-                            </select>
-
-                        </div>
+    </select>
+</div>
+</div>
                         <div class="col-md-4">
                             <input type="submit" value="Search" class="btn btn-primary" />
                         </div>
