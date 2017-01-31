@@ -60,6 +60,47 @@ namespace PRCS1.Controllers
 
 
         }
+
+        public ActionResult Index2(string sName, string bloodGroup, string dist, string gender)
+        {
+
+            var bloodLst = new List<string>();
+            var bloodQry = from d in db.BloodInfo
+                           orderby d.BloodGroup
+                           select d.BloodGroup;
+            bloodLst.AddRange(bloodQry.Distinct());
+            ViewBag.bloodGroup = new SelectList(bloodLst);
+
+
+
+
+            var blood = from m in db.BloodInfo
+                        select m;
+
+            if (!String.IsNullOrEmpty(sName))
+            {
+                blood = blood.Where(s => s.Adress.Contains(sName));
+            }
+            if (!string.IsNullOrEmpty(bloodGroup))
+            {
+                blood = blood.Where(x => x.BloodGroup == bloodGroup);
+            }
+            if (!String.IsNullOrEmpty(dist))
+            {
+                blood = blood.Where(r => r.District == dist);
+            }
+            if (!String.IsNullOrEmpty(gender))
+            {
+                blood = blood.Where(s => s.Gender.Contains(gender));
+            }
+          
+            return View(blood);
+
+
+
+        }
+
+
         public ActionResult showReacted()
         {
             var blood = from m in db.BloodInfo

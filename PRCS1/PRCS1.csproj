@@ -501,6 +501,7 @@
     <Content Include="Views\ThalassimiaInfoes\Details.cshtml" />
     <Content Include="Views\ThalassimiaInfoes\Edit.cshtml" />
     <Content Include="Views\ThalassimiaInfoes\Index.cshtml" />
+    <Content Include="Views\BloodDonorInfoes\Index2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

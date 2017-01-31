@@ -17,16 +17,17 @@
 
             <div class="col-md-6">
 
-                Blood Campus: @Html.TextBox("SearchString") <br /><br/>
-                </div>
+                Blood Campus: @Html.TextBox("SearchString",null,new { @style= "border:solid" })</div> 
+                
             <div class="col-md-6">
-                Institute: @Html.TextBox("Institute") <br /><br/>
-             </div>
+                Institute:
+    @Html.TextBox("Institute", null, new { @style = "border:solid" }) <br />
+</div>
             <div class="col-md-6">
-                <input type="submit" value="Filter" />
+                <input type="submit" class="btn btn-success" value="Filter" />
                 </div>
-            </div>
-</p> 
+            </div><br><br>
+</p>
 }
 
 
